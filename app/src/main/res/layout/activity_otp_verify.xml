@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/niceappbg">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20sdp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="10"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="MissingConstraints"
+                        android:paddingBottom="@dimen/_4sdp">
+                        <ImageView
+                            android:id="@+id/imgmobile"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/ic_baseline_tablet_mac_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                           
+                            android:text="Recharge"
+                            android:textFontWeight="700"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgmobile"
+                            app:layout_constraintLeft_toRightOf="@+id/imgmobile"
+                            app:layout_constraintTop_toTopOf="@id/imgmobile" />
+
+                        <ImageView
+                            android:id="@+id/imgmobile1"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/mobile"
+                            app:layout_constraintEnd_toStartOf="@+id/imgdth"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgmobile" />
+
+                        <TextView
+                            android:id="@+id/tvprepad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Prepaid"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgmobile1"
+                            app:layout_constraintStart_toStartOf="@id/imgmobile1"
+                            app:layout_constraintTop_toBottomOf="@+id/imgmobile1"
+                            app:layout_constraintVertical_bias="1.0" />
+                        <ImageView
+                            android:id="@+id/imgdth"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/dth"
+                            app:layout_constraintEnd_toStartOf="@+id/imgpostpaid"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgmobile1"
+                            app:layout_constraintTop_toTopOf="@id/imgmobile1" />
+
+                        <TextView
+                            android:id="@+id/tvdth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           
+                            android:gravity="center"
+                            android:text="DTH"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvprepad"
+                            app:layout_constraintEnd_toEndOf="@id/imgdth"
+                            app:layout_constraintHorizontal_bias="0.4"
+                            app:layout_constraintStart_toStartOf="@id/imgdth"
+                            app:layout_constraintTop_toBottomOf="@+id/imgdth" />
+                        <ImageView
+                            android:id="@+id/imgpostpaid"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/postpaid"
+                            app:layout_constraintEnd_toStartOf="@+id/imglandline"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgdth"
+                            app:layout_constraintTop_toTopOf="@id/imgmobile1" />
+                        <TextView
+                            android:id="@+id/tvpostpaid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           
+                            android:text="Postpaid"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvprepad"
+                            app:layout_constraintEnd_toEndOf="@id/imgpostpaid"
+                            app:layout_constraintStart_toStartOf="@id/imgpostpaid"
+                            app:layout_constraintTop_toBottomOf="@+id/imgpostpaid" />
+                        <ImageView
+                            android:id="@+id/imglandline"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/phone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgpostpaid"
+                            app:layout_constraintTop_toTopOf="@id/imgmobile1" />
+                        <TextView
+                            android:id="@+id/tvplandline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           
+                            android:text="Landline"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvprepad"
+                            app:layout_constraintEnd_toEndOf="@id/imglandline"
+                            app:layout_constraintStart_toStartOf="@id/imglandline"
+                            app:layout_constraintTop_toBottomOf="@+id/imglandline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@id/lay2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="10"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@id/lay1"
+                    app:layout_constraintStart_toStartOf="@id/lay1"
+                    app:layout_constraintEnd_toEndOf="@id/lay1"
+                    tools:ignore="MissingConstraints">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/_4sdp"
+                        tools:ignore="MissingConstraints">
+                        <ImageView
+                            android:id="@+id/imgbillpayment"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/b"                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                           
+                            android:text="Bill Payment"
+                            android:textFontWeight="700"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgbillpayment"
+                            app:layout_constraintLeft_toRightOf="@+id/imgbillpayment"
+                            app:layout_constraintTop_toTopOf="@id/imgbillpayment" />
+                        <ImageView
+                            android:id="@+id/imgElectricity"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/electricity"
+                            app:layout_constraintEnd_toStartOf="@+id/imgGas"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgbillpayment" />
+                        <TextView
+                            android:id="@+id/tvElectricity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           
+                            android:text="Electricity"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgElectricity"
+                            app:layout_constraintStart_toStartOf="@id/imgElectricity"
+                            app:layout_constraintTop_toBottomOf="@+id/imgElectricity" />
+                        <ImageView
+                            android:id="@+id/imgGas"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/gas"
+                            app:layout_constraintEnd_toStartOf="@+id/imgInsurance"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgElectricity"
+                            app:layout_constraintTop_toTopOf="@id/imgElectricity" />
+
+                        <TextView
+                            android:id="@+id/tvGas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           
+                            android:text="Gas"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvElectricity"
+                            app:layout_constraintEnd_toEndOf="@id/imgGas"
+                            app:layout_constraintStart_toStartOf="@id/imgGas"
+                            app:layout_constraintTop_toBottomOf="@+id/imgGas" />
+                        <ImageView
+                            android:id="@+id/imgInsurance"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/umbrella"
+                            app:layout_constraintEnd_toStartOf="@+id/imgBrodband"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgGas"
+                            app:layout_constraintTop_toTopOf="@id/imgElectricity" />
+                        <TextView
+                            android:id="@+id/tvInsurance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Insurance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvElectricity"
+                            app:layout_constraintEnd_toEndOf="@id/imgInsurance"
+                            app:layout_constraintStart_toStartOf="@id/imgInsurance"
+                            app:layout_constraintTop_toBottomOf="@+id/imgInsurance" />
+                        <ImageView
+                            android:id="@+id/imgBrodband"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/router"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgInsurance"
+                            app:layout_constraintTop_toTopOf="@id/imgElectricity" />
+                        <TextView
+                            android:id="@+id/tvBrodband"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+
+                           
+                            android:text="Brodband"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvElectricity"
+                            app:layout_constraintEnd_toEndOf="@id/imgBrodband"
+                            app:layout_constraintStart_toStartOf="@id/imgBrodband"
+                            app:layout_constraintTop_toBottomOf="@+id/imgBrodband" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lay3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/lay2"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:shadowColor="@color/white"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:shadowRadius="10"
+                    app:layout_constraintStart_toStartOf="@id/lay2"
+                    app:layout_constraintEnd_toEndOf="@id/lay2"
+                    tools:ignore="MissingConstraints">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="MissingConstraints">
+                        <ImageView
+                            android:id="@+id/imgUIlities"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/postit"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                           
+                            android:text="UIlities"
+                            android:textFontWeight="700"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgUIlities"
+                            app:layout_constraintLeft_toRightOf="@+id/imgUIlities"
+                            app:layout_constraintTop_toTopOf="@id/imgUIlities" />
+                        <ImageView
+                            android:id="@+id/imgGoogle"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/gplay"
+                            app:layout_constraintEnd_toStartOf="@+id/imgFASTage"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgUIlities" />
+                        <TextView
+                            android:id="@+id/tvGoogle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                           
+                            android:text="Google Play \n Store"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgGoogle"
+                            app:layout_constraintStart_toStartOf="@id/imgGoogle"
+                            app:layout_constraintTop_toBottomOf="@+id/imgGoogle" />
+                        <ImageView
+                            android:id="@+id/imgFASTage"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/fastag"
+                            app:layout_constraintEnd_toStartOf="@+id/imgUtilities"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgGoogle"
+                            app:layout_constraintTop_toTopOf="@id/imgGoogle" />
+
+                        <TextView
+                            android:id="@+id/tvFASTage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                           
+                            android:text="FASTage"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvGoogle"
+                            app:layout_constraintEnd_toEndOf="@id/imgFASTage"
+                            app:layout_constraintStart_toStartOf="@id/imgFASTage"
+                            app:layout_constraintTop_toBottomOf="@+id/imgFASTage" />
+                        <ImageView
+                            android:id="@+id/imgUtilities"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/minist"
+                            app:layout_constraintEnd_toStartOf="@+id/imgGift"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgFASTage"
+                            app:layout_constraintTop_toTopOf="@id/imgGoogle" />
+                        <TextView
+                            android:id="@+id/tvUtilities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Utilities \n Payments"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:textSize="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvGoogle"
+                            app:layout_constraintEnd_toEndOf="@id/imgUtilities"
+                            app:layout_constraintStart_toStartOf="@id/imgUtilities"
+                            app:layout_constraintTop_toBottomOf="@+id/imgUtilities" />
+                        <ImageView
+                            android:id="@+id/imgGift"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/giftcard"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgUtilities"
+                            app:layout_constraintTop_toTopOf="@id/imgGoogle" />
+                        <TextView
+                            android:id="@+id/tvGift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                           
+                            android:text="Gift Vauchers"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvGoogle"
+                            app:layout_constraintEnd_toEndOf="@id/imgGift"
+                            app:layout_constraintStart_toStartOf="@id/imgGift"
+                            app:layout_constraintTop_toBottomOf="@+id/imgGift" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lay4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/lay3"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="10"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="@id/lay3"
+                    app:layout_constraintEnd_toEndOf="@id/lay3"
+                    tools:ignore="MissingConstraints">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        tools:ignore="MissingConstraints">
+                        <ImageView
+                            android:id="@+id/imgBooking"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/calendar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                           
+                            android:text="Booking"
+                            android:textFontWeight="700"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgBooking"
+                            app:layout_constraintLeft_toRightOf="@+id/imgBooking"
+                            app:layout_constraintTop_toTopOf="@id/imgBooking" />
+
+                        <ImageView
+                            android:id="@+id/imgBus"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/bus"
+                            app:layout_constraintEnd_toStartOf="@+id/imgFlights"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgBooking" />
+
+                        <TextView
+                            android:id="@+id/tvBus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                           
+                            android:text="Bus Ticket"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgBus"
+                            app:layout_constraintStart_toStartOf="@id/imgBus"
+                            app:layout_constraintTop_toBottomOf="@+id/imgBus" />
+                        <ImageView
+                            android:id="@+id/imgFlights"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/airport"
+                            app:layout_constraintEnd_toStartOf="@+id/imgRailway"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgBus"
+                            app:layout_constraintTop_toTopOf="@id/imgBus" />
+
+                        <TextView
+                            android:id="@+id/tvFlights"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                           
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Flights Tickets"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvBus"
+                            app:layout_constraintEnd_toEndOf="@id/imgFlights"
+                            app:layout_constraintHorizontal_bias="0.457"
+                            app:layout_constraintStart_toStartOf="@id/imgFlights"
+                            app:layout_constraintTop_toBottomOf="@+id/imgFlights"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/imgRailway"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/train"
+                            app:layout_constraintEnd_toStartOf="@+id/imgHotel"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgFlights"
+                            app:layout_constraintTop_toTopOf="@id/imgBus" />
+                        <TextView
+                            android:id="@+id/tvRailway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Railway Ticket"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvBus"
+                            app:layout_constraintEnd_toEndOf="@id/imgRailway"
+                            app:layout_constraintStart_toStartOf="@id/imgRailway"
+                            app:layout_constraintTop_toBottomOf="@+id/imgRailway" />
+
+                        <ImageView
+                            android:id="@+id/imgHotel"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/hotel"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgRailway"
+                            app:layout_constraintTop_toTopOf="@id/imgBus" />
+
+                        <TextView
+                            android:id="@+id/tvHotel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                           
+                            android:text="Hotel"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvBus"
+                            app:layout_constraintEnd_toEndOf="@id/imgHotel"
+                            app:layout_constraintStart_toStartOf="@id/imgHotel"
+                            app:layout_constraintTop_toBottomOf="@+id/imgHotel" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@id/lay5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/lay4"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:shadowRadius="10"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="@id/lay4"
+                    app:layout_constraintEnd_toEndOf="@id/lay4"
+                    tools:ignore="MissingConstraints">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/lay5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        tools:ignore="MissingConstraints">
+                        <ImageView
+                            android:id="@+id/imgOthers"
+
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/other1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                           
+                            android:text="Others"
+                            android:textFontWeight="700"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgOthers"
+                            app:layout_constraintLeft_toRightOf="@+id/imgOthers"
+                            app:layout_constraintTop_toTopOf="@id/imgOthers" />
+
+                        <ImageView
+                            android:id="@+id/imgWater"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/watar"
+                            app:layout_constraintEnd_toStartOf="@+id/imgLoan"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="spread"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgOthers" />
+
+                        <TextView
+                            android:id="@+id/tvWater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Water"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgWater"
+                            app:layout_constraintStart_toStartOf="@id/imgWater"
+                            app:layout_constraintTop_toBottomOf="@+id/imgWater" />
+
+                        <ImageView
+                            android:id="@+id/imgLoan"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/loan"
+                            app:layout_constraintEnd_toStartOf="@+id/imgCredit"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgWater"
+                            app:layout_constraintTop_toTopOf="@id/imgWater" />
+
+                        <TextView
+                            android:id="@+id/tvLoan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Loan EMI"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvWater"
+                            app:layout_constraintEnd_toEndOf="@id/imgLoan"
+                            app:layout_constraintStart_toStartOf="@id/imgLoan"
+                            app:layout_constraintTop_toBottomOf="@+id/imgLoan" />
+                        <ImageView
+                            android:id="@+id/imgCredit"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/credit_card"
+                            app:layout_constraintEnd_toStartOf="@+id/imgConnection"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgLoan"
+                            app:layout_constraintTop_toTopOf="@id/imgWater" />
+                        <TextView
+                            android:id="@+id/tvCredit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                           
+                            android:text="Credit Card"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvWater"
+                            app:layout_constraintEnd_toEndOf="@id/imgCredit"
+                            app:layout_constraintStart_toStartOf="@id/imgCredit"
+                            app:layout_constraintTop_toBottomOf="@+id/imgCredit" />
+                        <ImageView
+                            android:id="@+id/imgConnection"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:background="@drawable/dth"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/imgCredit"
+                            app:layout_constraintTop_toTopOf="@id/imgWater" />
+                        <TextView
+                            android:id="@+id/tvConnection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                           
+                            android:text="DTH\nConnection"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvWater"
+                            app:layout_constraintEnd_toEndOf="@id/imgConnection"
+                            app:layout_constraintStart_toStartOf="@id/imgConnection"
+                            app:layout_constraintTop_toBottomOf="@+id/imgConnection" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

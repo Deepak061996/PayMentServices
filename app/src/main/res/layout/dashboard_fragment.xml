@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_40sdp"
+    android:background="@drawable/niceappbg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_1sdp"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lay11"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_10sdp"
+                    android:shadowRadius="10"
+                    app:cardBackgroundColor="#B2FFAFBD"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="#B2FFAFBD"
+                        android:padding="@dimen/_2sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/imgWallet"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/wallet"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/Wallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/Wallet_Balance"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgWallet"
+                            app:layout_constraintStart_toStartOf="@id/imgWallet"
+                            app:layout_constraintTop_toBottomOf="@id/imgWallet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Rs. 0.00"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@id/imgWallet"
+                            app:layout_constraintStart_toStartOf="@id/imgWallet"
+                            app:layout_constraintTop_toBottomOf="@id/Wallet" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lay3"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/_10sdp"
+                    android:shadowRadius="10"
+                    app:cardBackgroundColor="#B2FFAFBD"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="#B2FFAFBD"
+                        android:padding="@dimen/_2sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/imgcashback"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bag"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cashback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/Today"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/imgcashback"
+                            app:layout_constraintStart_toStartOf="@+id/imgcashback"
+                            app:layout_constraintTop_toBottomOf="@+id/imgcashback" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Rs. 0.00"
+                            android:textColor="@color/black"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/imgcashback"
+                            app:layout_constraintStart_toStartOf="@+id/imgcashback"
+                            app:layout_constraintTop_toBottomOf="@+id/cashback" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/root1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/rect_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:background="@drawable/mobilenoback"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"></androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/root2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_290sdp"
+                app:layout_constraintVertical_bias="0.0">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/halfcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/gradient"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="MissingConstraints">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:weightSum="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgAdd"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/rupees" />
+
+                            <TextView
+                                android:id="@+id/Add"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/Add_Money"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="@dimen/_8sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgQr"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/barcodescanner" />
+
+                            <TextView
+                                android:id="@+id/MyQR"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/My_QR"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="@dimen/_8sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgTransaction"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:background="@drawable/transaction" />
+
+                            <TextView
+                                android:id="@+id/Transaction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/Transaction"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="@dimen/_8sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgDMT"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/bank" />
+
+                            <TextView
+                                android:id="@+id/DMT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/DMT"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="@dimen/_8sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.88"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_25sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:shadowRadius="10"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/_4sdp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imgmobile"
+                                        android:layout_width="@dimen/_15sdp"
+                                        android:layout_height="@dimen/_15sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:background="@drawable/ic_baseline_tablet_mac_24" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="@string/Recharge"
+                                        android:textColor="@color/black"
+                                        android:textFontWeight="700"
+                                        android:textSize="@dimen/_10sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:weightSum="4">
+
+                                    <LinearLayout
+                                        android:id="@+id/cardprepad"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="?selectableItemBackground"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgmobile1"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:layout_marginEnd="@dimen/_8sdp"
+                                            android:background="@drawable/mobile" />
+
+                                        <TextView
+                                            android:id="@+id/tvprepad"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/Prepaid"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgdth"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:background="@drawable/dth" />
+
+                                        <TextView
+                                            android:id="@+id/tvdth"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="clip_horizontal"
+                                            android:text="@string/DTH"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/cardpospaid"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="?selectableItemBackground"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgpostpaid"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:background="@drawable/postpaid" />
+
+                                        <TextView
+                                            android:id="@+id/tvpostpaid"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/Postpaid"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imglandline"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+
+                                            android:background="@drawable/phone" />
+
+                                        <TextView
+                                            android:id="@+id/tvplandline"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:gravity="center"
+                                            android:text="@string/Landline"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/lay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_25sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:elevation="@dimen/_10sdp"
+                        android:shadowRadius="10"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/_4sdp"
+                            tools:ignore="MissingConstraints">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imgbillpayment"
+                                        android:layout_width="@dimen/_15sdp"
+                                        android:layout_height="@dimen/_15sdp"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:background="@drawable/b" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:text="@string/Bill_Payment"
+                                        android:textColor="@color/black"
+                                        android:textFontWeight="700"
+                                        android:textSize="@dimen/_10sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:weightSum="4">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgElectricity"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:layout_marginEnd="@dimen/_8sdp"
+                                            android:background="@drawable/electricity" />
+
+                                        <TextView
+                                            android:id="@+id/tvElectricity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/Electricity"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgGas"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:layout_marginStart="@dimen/_8sdp"
+                                            android:layout_marginEnd="@dimen/_8sdp"
+                                            android:background="@drawable/gas" />
+
+                                        <TextView
+                                            android:id="@+id/tvGas"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/Gas"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgInsurance"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:background="@drawable/umbrella" />
+
+                                        <TextView
+                                            android:id="@+id/tvInsurance"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/Insurance"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/imgBrodband"
+                                            android:layout_width="@dimen/_30sdp"
+                                            android:layout_height="@dimen/_30sdp"
+                                            android:background="@drawable/router" />
+
+                                        <TextView
+                                            android:id="@+id/tvBrodband"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                            android:text="@string/Brodband"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_8sdp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simage"
+                tools:ignore="MissingConstraints"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

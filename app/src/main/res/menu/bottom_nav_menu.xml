@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_drawable"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/Other"
+        android:icon="@drawable/other"
+        android:title="Other" />
+
+    <item
+        android:id="@+id/Services"
+        android:title="All Services" />
+
+    <item
+        android:id="@+id/Report"
+        android:icon="@drawable/report"
+        android:title="Report" />
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/user"
+        android:title="Profile" />
+
+</menu>

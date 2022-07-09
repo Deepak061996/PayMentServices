@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.paymentservice.ui.fragment.DashboardFragment"
+        android:label="DashboardFragment" >
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allServicesActivity"
+            app:destination="@id/allServicesActivity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_otherFragment"
+            app:destination="@id/otherFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_roportFragment"
+            app:destination="@id/roportFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_prepaidActivity"
+            app:destination="@id/prepaidActivity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_pospaidActivity"
+            app:destination="@id/pospaidActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/allServicesActivity"
+        android:name="com.example.paymentservice.ui.activity.AllServicesActivity"
+        android:label="AllServicesActivity" />
+    <fragment
+        android:id="@+id/otherFragment"
+        android:name="com.example.paymentservice.ui.fragment.OtherFragment"
+        android:label="fragment_other"
+        tools:layout="@layout/fragment_other" />
+    <fragment
+        android:id="@+id/roportFragment"
+        android:name="com.example.paymentservice.ui.fragment.ReportFragment"
+        android:label="fragment_roport"
+        tools:layout="@layout/fragment_roport" >
+        <action
+            android:id="@+id/action_roportFragment_to_walletSummaryActivity"
+            app:destination="@id/walletSummaryActivity" />
+        <action
+            android:id="@+id/action_roportFragment_to_paymentReport"
+            app:destination="@id/paymentReport" />
+        <action
+            android:id="@+id/action_roportFragment_to_DTHReportActivity"
+            app:destination="@id/DTHReportActivity" />
+        <action
+            android:id="@+id/action_roportFragment_to_rechargeReportActivity"
+            app:destination="@id/rechargeReportActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.paymentservice.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/walletSummaryActivity"
+        android:name="com.example.paymentservice.ui.activity.WalletSummaryActivity"
+        android:label="activity_wallet_summary"
+        tools:layout="@layout/activity_wallet_summary" />
+    <activity
+        android:id="@+id/paymentReport"
+        android:name="com.example.paymentservice.ui.activity.PaymentReport"
+        android:label="PaymentReport" />
+    <activity
+        android:id="@+id/DTHReportActivity"
+        android:name="com.example.paymentservice.ui.activity.DTHReportActivity"
+        android:label="activity_dthreport"
+        tools:layout="@layout/activity_dthreport" />
+    <activity
+        android:id="@+id/rechargeReportActivity"
+        android:name="com.example.paymentservice.ui.activity.RechargeReportActivity"
+        android:label="activity_recharge_report2"
+        tools:layout="@layout/activity_recharge_report2" />
+    <activity
+        android:id="@+id/prepaidActivity"
+        android:name="com.example.paymentservice.ui.activity.PrepaidActivity"
+        android:label="PrepaidActivity" />
+    <activity
+        android:id="@+id/pospaidActivity"
+        android:name="com.example.paymentservice.ui.activity.PostpaidActivity"
+        android:label="PospaidActivity" />
+</navigation>
