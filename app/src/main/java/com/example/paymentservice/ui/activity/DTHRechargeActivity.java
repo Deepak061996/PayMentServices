@@ -3,58 +3,63 @@ package com.example.paymentservice.ui.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
 import com.example.paymentservice.R;
-import com.example.paymentservice.databinding.ActivityPrepaidBinding;
+import com.example.paymentservice.databinding.ActivityDthrechargeBinding;
 import com.example.paymentservice.ui.model.ResultDataModel;
 import com.example.paymentservice.ui.model.RootRecharge;
 import com.example.paymentservice.ui.model.RootResponse;
 import com.example.paymentservice.ui.network.ApiManager;
 import com.example.paymentservice.ui.network.ApiResponseInterface;
 import com.example.paymentservice.ui.util.AppConstants;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PrepaidActivity extends AppCompatActivity implements View.OnClickListener{
+public class DTHRechargeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ActivityPrepaidBinding binding;
+    ActivityDthrechargeBinding binding;
     SharedPreferences loginpfe;
     SharedPreferences operator;
-    private ApiManager mApiManager;
+    SharedPreferences dashboard;
     SharedPreferences.Editor editor;
+    private HashMap<Integer, String> OperatorlistMap;
+    private ApiManager mApiManager;
     private ApiResponseInterface mInterFace;
     private String token;
-    private HashMap<Integer, String> OperatorlistMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= ActivityPrepaidBinding.inflate(getLayoutInflater());
+        binding=ActivityDthrechargeBinding.inflate(getLayoutInflater());
         View view=binding.getRoot();
         setContentView(view);
         loginpfe=getSharedPreferences("isLogin",MODE_PRIVATE);
+        dashboard=getSharedPreferences("Dashboard",MODE_PRIVATE);
         operator=getSharedPreferences("Opertaor",MODE_PRIVATE);
         editor=operator.edit();
         OperatorlistMap=new HashMap<>();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        this.setTitle(R.string.Prepaid);
+        this.setTitle(R.string.DTH);
         ColorDrawable drawable=new ColorDrawable(Color.parseColor("#300D83"));
         getSupportActionBar().setBackgroundDrawable(drawable);
+
+        binding.tvtotalBalance.setText("\u20B9"+" "+dashboard.getInt("balance",0));
         setUpNetWork();
         {
             token=loginpfe.getString("token","null");
-            String mobile="mobile";
+            String mobile="dth";
             mApiManager.getOperatorRequest(token,mobile, AppConstants.Operator_REQUEST);
         }
+
         binding.btnRecharge.setOnClickListener(this);
     }
 
@@ -99,41 +104,13 @@ public class PrepaidActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == android.R.id.home) {
-            Intent intent = new Intent(PrepaidActivity.this, FragmentActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        return super.onOptionsItemSelected(menuItem);
-    }
-
-    @Override
-    public boolean onNavigateUp() {
-        super.onBackPressed();
-        return super.onNavigateUp();
-    }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
     public void onClick(View view) {
         switch (view.getId())
         {
             case R.id.btnRecharge:
-                    String mobile = binding.edmobile.getText().toString();
-                    String Amount = binding.edamount.getText().toString();
-                    String cus_id = loginpfe.getString("Cust_id", "null");
-                    String cus_type = loginpfe.getString("Cust_type", "null");
-                    String operator = binding.spoperator.getSelectedItem().toString();
-                    Log.d("name.....", "name" + operator);
-                    mApiManager.getPrepadiRechargeRequest(mobile, Amount, cus_id, cus_type, operator, token, AppConstants.PrepaidRecharge_REQUEST);
+                Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
                 break;
+
         }
-
     }
-
-
 }

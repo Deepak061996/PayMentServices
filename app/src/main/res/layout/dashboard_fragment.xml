@@ -43,7 +43,9 @@
                     android:shadowRadius="10"
                     app:cardBackgroundColor="#B2FFAFBD"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    tools:ignore="MissingConstraints">
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="8dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -77,10 +79,11 @@
                             app:layout_constraintTop_toBottomOf="@id/imgWallet" />
 
                         <TextView
+                            android:id="@+id/tvbalance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_4sdp"
-                            android:text="Rs. 0.00"
+                            android:text="\u20B9 0.00"
                             android:textColor="@color/black"
                             android:textFontWeight="700"
                             android:textSize="@dimen/_8sdp"
@@ -100,7 +103,9 @@
                     android:shadowRadius="10"
                     app:cardBackgroundColor="#B2FFAFBD"
                     app:cardCornerRadius="@dimen/_5sdp"
-                    tools:ignore="MissingConstraints">
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_8sdp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -352,7 +357,8 @@
                                         android:layout_width="@dimen/_15sdp"
                                         android:layout_height="@dimen/_15sdp"
                                         android:layout_marginStart="@dimen/_10sdp"
-                                        android:background="@drawable/ic_baseline_tablet_mac_24" />
+                                        android:background="@drawable/ic_baseline_tablet_mac_24"
+                                        android:layout_marginLeft="@dimen/_10sdp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -362,7 +368,8 @@
                                         android:text="@string/Recharge"
                                         android:textColor="@color/black"
                                         android:textFontWeight="700"
-                                        android:textSize="@dimen/_10sdp" />
+                                        android:textSize="@dimen/_10sdp"
+                                        android:layout_marginLeft="@dimen/_10sdp" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -398,10 +405,12 @@
                                     </LinearLayout>
 
                                     <LinearLayout
+                                        android:id="@+id/carddth"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
+                                        android:background="?selectableItemBackground"
                                         android:orientation="vertical">
 
                                         <ImageView
@@ -448,10 +457,12 @@
                                     </LinearLayout>
 
                                     <LinearLayout
+                                        android:id="@+id/cardlandline"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
+                                        android:background="?selectableItemBackground"
                                         android:orientation="vertical">
 
                                         <ImageView
@@ -516,7 +527,8 @@
                                         android:layout_width="@dimen/_15sdp"
                                         android:layout_height="@dimen/_15sdp"
                                         android:layout_marginStart="@dimen/_8sdp"
-                                        android:background="@drawable/b" />
+                                        android:background="@drawable/b"
+                                        android:layout_marginLeft="@dimen/_8sdp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -525,7 +537,8 @@
                                         android:text="@string/Bill_Payment"
                                         android:textColor="@color/black"
                                         android:textFontWeight="700"
-                                        android:textSize="@dimen/_10sdp" />
+                                        android:textSize="@dimen/_10sdp"
+                                        android:layout_marginLeft="@dimen/_10sdp" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -535,6 +548,8 @@
                                     android:weightSum="4">
 
                                     <LinearLayout
+                                        android:id="@+id/cardelectric"
+                                        android:background="?selectableItemBackground"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
@@ -564,6 +579,8 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
+                                        android:background="?selectableItemBackground"
+                                        android:id="@+id/cardGas"
                                         android:orientation="vertical">
 
                                         <ImageView
@@ -588,6 +605,8 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
+                                        android:id="@+id/cardinsurance"
+                                        android:background="?selectableItemBackground"
                                         android:orientation="vertical">
 
                                         <ImageView
@@ -606,10 +625,12 @@
                                     </LinearLayout>
 
                                     <LinearLayout
+                                        android:id="@+id/cardbroadband"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:gravity="center"
+                                        android:background="?selectableItemBackground"
                                         android:orientation="vertical">
 
                                         <ImageView

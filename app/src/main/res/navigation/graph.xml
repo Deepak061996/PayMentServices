@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_pospaidActivity"
             app:destination="@id/pospaidActivity" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_DTHRechargeActivity"
+            app:destination="@id/DTHRechargeActivity" />
     </fragment>
 
     <activity
@@ -89,4 +92,8 @@
         android:id="@+id/pospaidActivity"
         android:name="com.example.paymentservice.ui.activity.PostpaidActivity"
         android:label="PospaidActivity" />
+    <activity
+        android:id="@+id/DTHRechargeActivity"
+        android:name="com.example.paymentservice.ui.activity.DTHRechargeActivity"
+        android:label="DTHRechargeActivity" />
 </navigation>

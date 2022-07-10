@@ -26,6 +26,7 @@
         <entry key="..\:/PayMentService/app/src/main/res/drawable/rounded_button2.xml" value="0.145" />
         <entry key="..\:/PayMentService/app/src/main/res/font/montserrat.xml" value="0.1925925925925926" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/a.xml" value="0.4028776978417266" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/activity_dthrecharge.xml" value="0.25" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_dthreport.xml" value="0.1675929884566054" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_fragment.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -45,10 +46,12 @@
         <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_dashboard.xml" value="0.10208333333333333" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_m2_recarge.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_other.xml" value="0.1675929884566054" />
-        <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_profile.xml" value="0.15604959384352288" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/fragment_roport.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/paymenthistorysinglerow.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/rechargereportrow.xml" value="0.33" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/spinner_item.xml" value="0.1675929884566054" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/spinner_text.xml" value="0.1675929884566054" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/spinnerrow.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/walletsinglerow.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/menu/bottom_nav_menu.xml" value="0.10208333333333333" />

@@ -53,7 +53,8 @@
                                     android:layout_width="@dimen/_15sdp"
                                     android:layout_height="@dimen/_15sdp"
                                     android:layout_marginStart="@dimen/_10sdp"
-                                    android:background="@drawable/ic_baseline_tablet_mac_24" />
+                                    android:background="@drawable/ic_baseline_tablet_mac_24"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -63,7 +64,8 @@
                                     android:text="@string/Recharge"
                                     android:textColor="@color/black"
                                     android:textFontWeight="700"
-                                    android:textSize="@dimen/_10sdp" />
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -99,10 +101,12 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/carddth"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -149,6 +153,8 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/cardlandline"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -159,7 +165,6 @@
                                         android:id="@+id/imglandline"
                                         android:layout_width="@dimen/_30sdp"
                                         android:layout_height="@dimen/_30sdp"
-
                                         android:background="@drawable/phone" />
 
                                     <TextView
@@ -203,7 +208,8 @@
                                     android:layout_width="@dimen/_15sdp"
                                     android:layout_height="@dimen/_15sdp"
                                     android:layout_marginStart="@dimen/_8sdp"
-                                    android:background="@drawable/b"/>
+                                    android:background="@drawable/b"
+                                    android:layout_marginLeft="@dimen/_8sdp" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -211,7 +217,8 @@
                                     android:text="@string/Bill_Payment"
                                     android:textColor="@color/black"
                                     android:textFontWeight="700"
-                                    android:textSize="@dimen/_10sdp"/>
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -219,10 +226,12 @@
                                 android:layout_marginTop="@dimen/_8sdp"
                                 android:weightSum="4">
                                 <LinearLayout
+                                    android:id="@+id/cardelectric"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:layout_weight="1">
                                     <ImageView
                                         android:id="@+id/imgElectricity"
@@ -241,10 +250,12 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardGas"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:layout_weight="1">
                                     <ImageView
                                         android:id="@+id/imgGas"
@@ -263,10 +274,12 @@
                                         android:textSize="@dimen/_8sdp" />
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardinsurance"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:layout_weight="1">
                                     <ImageView
                                         android:id="@+id/imgInsurance"
@@ -283,17 +296,19 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardbroadband"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
                                     android:layout_weight="1">
+
                                     <ImageView
                                         android:id="@+id/imgBrodband"
                                         android:layout_width="@dimen/_30sdp"
-                                        android:layout_height="@dimen/_30sdp"
-                                        android:background="@drawable/router"
-                                        />
+                                        android:layout_height="34dp"
+                                        android:background="@drawable/router" />
 
                                     <TextView
                                         android:id="@+id/tvBrodband"
@@ -337,7 +352,8 @@
                                     android:layout_width="@dimen/_15sdp"
                                     android:layout_height="@dimen/_15sdp"
                                     android:layout_marginStart="@dimen/_8sdp"
-                                    android:background="@drawable/postit"/>
+                                    android:background="@drawable/postit"
+                                    android:layout_marginLeft="@dimen/_8sdp" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -345,7 +361,8 @@
                                     android:text="@string/Uilities"
                                     android:textColor="@color/black"
                                     android:textFontWeight="700"
-                                    android:textSize="@dimen/_10sdp"/>
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -353,10 +370,12 @@
                                 android:layout_marginTop="@dimen/_8sdp"
                                 android:weightSum="4">
                                 <LinearLayout
+                                    android:id="@+id/cardplaystore"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:layout_weight="1">
                                     <ImageView
                                         android:id="@+id/imgGoogle"
@@ -374,10 +393,12 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardfasttag"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
                                     android:gravity="center"
+                                    android:background="?selectableItemBackground"
                                     android:layout_weight="1">
                                     <ImageView
                                         android:id="@+id/imgFASTage"
@@ -395,9 +416,11 @@
                                         android:textSize="@dimen/_8sdp" />
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/carduilities"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
+                                    android:background="?selectableItemBackground"
                                     android:gravity="center"
                                     android:layout_weight="1">
                                     <ImageView
@@ -416,9 +439,11 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardgift"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
+                                    android:background="?selectableItemBackground"
                                     android:gravity="center"
                                     android:layout_weight="1">
                                     <ImageView
@@ -468,7 +493,8 @@
                                     android:layout_width="@dimen/_15sdp"
                                     android:layout_height="@dimen/_15sdp"
                                     android:layout_marginStart="@dimen/_8sdp"
-                                    android:background="@drawable/calendar"/>
+                                    android:background="@drawable/calendar"
+                                    android:layout_marginLeft="@dimen/_8sdp" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -476,7 +502,8 @@
                                     android:text="@string/Booking"
                                     android:textColor="@color/black"
                                     android:textFontWeight="700"
-                                    android:textSize="@dimen/_10sdp"/>
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -484,6 +511,8 @@
                                 android:layout_marginTop="@dimen/_8sdp"
                                 android:weightSum="4">
                                 <LinearLayout
+                                    android:id="@+id/cardbus"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -505,6 +534,8 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardflights"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -527,6 +558,8 @@
                                         android:textSize="@dimen/_8sdp" />
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardrailway"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -547,6 +580,8 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardhotel"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -599,7 +634,8 @@
                                     android:layout_width="@dimen/_15sdp"
                                     android:layout_height="@dimen/_15sdp"
                                     android:layout_marginStart="@dimen/_8sdp"
-                                    android:background="@drawable/other1"/>
+                                    android:background="@drawable/other1"
+                                    android:layout_marginLeft="@dimen/_8sdp" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -607,7 +643,8 @@
                                     android:text="@string/Others"
                                     android:textColor="@color/black"
                                     android:textFontWeight="700"
-                                    android:textSize="@dimen/_10sdp"/>
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -615,6 +652,8 @@
                                 android:layout_marginTop="@dimen/_8sdp"
                                 android:weightSum="4">
                                 <LinearLayout
+                                    android:id="@+id/cardwater"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -636,6 +675,8 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardloan"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -657,6 +698,8 @@
                                         android:textSize="@dimen/_8sdp" />
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/cardcredit"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
@@ -678,6 +721,8 @@
                                         android:textSize="@dimen/_8sdp"/>
                                 </LinearLayout>
                                 <LinearLayout
+                                    android:id="@+id/carddthconnection"
+                                    android:background="?selectableItemBackground"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"

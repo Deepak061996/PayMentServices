@@ -3,6 +3,7 @@
     package="com.example.paymentservice">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fab_Bottom_app_bar">
         <activity
+            android:name=".ui.activity.DTHRechargeActivity"
+            android:theme="@style/AppEditText"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.SingupActivity"
             android:exported="false"
-            android:theme="@style/AppEditText"/>
+            android:theme="@style/AppEditText" />
         <activity
             android:name=".ui.activity.PostpaidActivity"
             android:exported="false"

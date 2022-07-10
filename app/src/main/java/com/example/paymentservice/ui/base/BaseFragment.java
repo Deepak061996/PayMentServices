@@ -40,11 +40,6 @@ public class BaseFragment extends Fragment {
             view = viewBinding.getRoot();
             setUpUi(view, viewBinding);
         }
- 
-       
-     
-         
-
         return view;
     }
 
