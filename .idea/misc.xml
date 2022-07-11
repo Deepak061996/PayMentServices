@@ -8,8 +8,10 @@
         <entry key="..\:/PayMentService/app/src/main/res/drawable-v24/mobilenoback.xml" value="0.104" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/backcardstrock.xml" value="0.158" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/customedittext.xml" value="0.158" />
+        <entry key="..\:/PayMentService/app/src/main/res/drawable/customedittext1.xml" value="0.168" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/customspinner.xml" value="0.158" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/gradient.xml" value="0.168" />
+        <entry key="..\:/PayMentService/app/src/main/res/drawable/gradientleft.xml" value="0.194" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/home_drawable.xml" value="0.154" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.154" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.1525" />
@@ -25,7 +27,7 @@
         <entry key="..\:/PayMentService/app/src/main/res/drawable/rounded_button1.xml" value="0.1525" />
         <entry key="..\:/PayMentService/app/src/main/res/drawable/rounded_button2.xml" value="0.145" />
         <entry key="..\:/PayMentService/app/src/main/res/font/montserrat.xml" value="0.1925925925925926" />
-        <entry key="..\:/PayMentService/app/src/main/res/layout/a.xml" value="0.4028776978417266" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/a.xml" value="0.22" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_dthrecharge.xml" value="0.25" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_dthreport.xml" value="0.1675929884566054" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_fragment.xml" value="0.33" />
@@ -37,7 +39,7 @@
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_prepaid.xml" value="0.33" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_recharge_report.xml" value="0.1675929884566054" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_recharge_report2.xml" value="0.33" />
-        <entry key="..\:/PayMentService/app/src/main/res/layout/activity_singup.xml" value="0.1675929884566054" />
+        <entry key="..\:/PayMentService/app/src/main/res/layout/activity_singup.xml" value="0.25" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_wallet_summary.xml" value="0.25" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/activity_water_report.xml" value="0.1675929884566054" />
         <entry key="..\:/PayMentService/app/src/main/res/layout/alert_dialog.xml" value="0.1" />

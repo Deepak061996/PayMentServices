@@ -13,6 +13,8 @@ import com.example.paymentservice.ui.model.RootResponse;
 import com.example.paymentservice.ui.network.ApiManager;
 import com.example.paymentservice.ui.network.ApiResponseInterface;
 import com.example.paymentservice.ui.util.AppConstants;
+import com.example.paymentservice.ui.util.CommonUtils;
+
 import java.util.ArrayList;
 
 
@@ -31,7 +33,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editor=getSharedPreferences("isLogin",MODE_PRIVATE).edit();
         setUpNetWork();
         binding.btnNext.setOnClickListener(this);
-        binding.tvcreate.setOnClickListener(this);
+        binding.tvsignup.setOnClickListener(this);
     }
 
     private void setUpNetWork() {
@@ -82,16 +84,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId())
         {
             case R.id.btn_next:
-                String mobile=binding.etmobile.getText().toString();
-                String pass=binding.etpassword.getText().toString();
-                String deviceid="1324276";
-                String devicename="realmi";
-                String otp="999999";
-                mApiManager.getLoginRequest(mobile,pass,deviceid,devicename,otp,AppConstants.LOGIN_REQUEST);
+                if (isValidation()) {
+                    String mobile = binding.etmobile.getText().toString();
+                    String pass = binding.etpassword.getText().toString();
+                    String deviceid = "1324276";
+                    String devicename = CommonUtils.getDeviceName();
+                    Log.d("device ","Name"+devicename);
+                    String otp = "999999";
+                    mApiManager.getLoginRequest(mobile, pass, deviceid, devicename, otp, AppConstants.LOGIN_REQUEST);
+                }
                 break;
-            case R.id.tvcreate:
-                startActivity(new Intent(LoginActivity.this,SingupActivity.class));
+            case R.id.tvsignup:
+                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
                 break;
         }
+    }
+
+    private boolean isValidation() {
+        boolean result=true;
+        if (binding.etmobile.getText().toString().isEmpty()) {
+            binding.etmobile.setError("Enter Mobile Number");
+            return false;
+        }else if (binding.etpassword.getText().toString().isEmpty()) {
+            binding.etpassword.setError("Enter Password");
+            return false;
+        }
+        return result;
     }
 }

@@ -18,6 +18,15 @@ public interface ApiInterface {
     @POST("appapi/dashboard")
     Call<RootResponse> getDashboardRequest(@Field("token")String token, @Field("cus_mobile")String mobile);
 
+    @FormUrlEncoded
+    @POST("appapi/rechargeHistory")
+    Call<RootResponse> getRechargeHistoryRequest(@Field("token")String token, @Field("cus_mobile")String mobile,@Field("date")String date);
+
+    @FormUrlEncoded
+    @POST("appapi/rechargeHistoryFromTo")
+    Call<RootResponse> getRechargeHistoryfromandtoRequest(@Field("token")String token, @Field("cus_mobile")String mobile,@Field("fromDate")String fromdate,@Field("toDate")String todate);
+
+
 
     @FormUrlEncoded
     @POST("appapi/walletBalance")

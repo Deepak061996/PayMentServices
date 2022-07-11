@@ -31,6 +31,7 @@ public class PostpaidActivity extends AppCompatActivity implements View.OnClickL
     ActivityPospaidBinding binding;
     SharedPreferences loginpfe;
     SharedPreferences operator;
+    SharedPreferences dashboard;
     private ApiManager mApiManager;
     SharedPreferences.Editor editor;
     private ApiResponseInterface mInterFace;
@@ -49,8 +50,10 @@ public class PostpaidActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().setBackgroundDrawable(drawable);
         loginpfe=getSharedPreferences("isLogin",MODE_PRIVATE);
         operator=getSharedPreferences("Opertaor",MODE_PRIVATE);
+        dashboard=getSharedPreferences("Dashboard",MODE_PRIVATE);
         editor=operator.edit();
         OperatorlistMap=new HashMap<>();
+        binding.tvtotalBalance.setText("\u20B9"+" "+dashboard.getInt("balance",0));
         setUpNetWork();
         {
             token=loginpfe.getString("token","null");

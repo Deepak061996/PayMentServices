@@ -17,9 +17,8 @@
             android:theme="@style/AppEditText"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.SingupActivity"
-            android:exported="false"
-            android:theme="@style/AppEditText" />
+            android:name=".ui.activity.SignupActivity"
+            android:exported="false"/>
         <activity
             android:name=".ui.activity.PostpaidActivity"
             android:exported="false"

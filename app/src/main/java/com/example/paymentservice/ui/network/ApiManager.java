@@ -107,6 +107,75 @@ public class ApiManager {
 
 
 
+
+
+    public void getRechargeHistoryRequest(String token,String mobile,String date, int req) {
+        showDialog("");
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+
+        Call<RootResponse> call = apiService.getRechargeHistoryRequest(token,mobile,date);
+
+        call.enqueue(new Callback<RootResponse>() {
+            @Override
+            public void onResponse(Call<RootResponse> call, Response<RootResponse> response) {
+                closeDialog();
+                Log.d("History","recharge"+response.body().message);
+                if (response.body()!=null ) {
+                    mApiResponseInterface.isSuccess(response.body(),req);
+                } else {
+                    mApiResponseInterface.isError("Failed",req);
+                }
+            }
+            @Override
+            public void onFailure(Call<RootResponse> call, Throwable t) {
+                closeDialog();
+                Log.d("History","recharge"+t.getMessage());
+                if(t instanceof IOException)
+                {
+                    mApiResponseInterface.isError("Internet is not Connected",req);
+                } else {
+                    mApiResponseInterface.isError("Please Contact to Administrator",req);
+                }
+            }
+        });
+    }
+
+
+
+
+    public void getRechargeHistoryfromandtoRequest(String token,String mobile,String fromdate,String todate, int req) {
+        showDialog("");
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+
+        Call<RootResponse> call = apiService.getRechargeHistoryfromandtoRequest(token,mobile,fromdate,todate);
+
+        call.enqueue(new Callback<RootResponse>() {
+            @Override
+            public void onResponse(Call<RootResponse> call, Response<RootResponse> response) {
+                closeDialog();
+                Log.d("History","recharge"+response.body().message);
+                if (response.body()!=null ) {
+                    mApiResponseInterface.isSuccess(response.body(),req);
+                } else {
+                    mApiResponseInterface.isError("Failed",req);
+                }
+            }
+            @Override
+            public void onFailure(Call<RootResponse> call, Throwable t) {
+                closeDialog();
+                Log.d("History","recharge"+t.getMessage());
+                if(t instanceof IOException)
+                {
+                    mApiResponseInterface.isError("Internet is not Connected",req);
+                } else {
+                    mApiResponseInterface.isError("Please Contact to Administrator",req);
+                }
+            }
+        });
+    }
+
+
+
     public void getWalletBalanceRequest(String token,String mobile, int req) {
         showDialog("");
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);

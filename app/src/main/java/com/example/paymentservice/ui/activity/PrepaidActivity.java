@@ -31,6 +31,7 @@ public class PrepaidActivity extends AppCompatActivity implements View.OnClickLi
     SharedPreferences operator;
     private ApiManager mApiManager;
     SharedPreferences.Editor editor;
+    SharedPreferences dashboard;
     private ApiResponseInterface mInterFace;
     private String token;
     private HashMap<Integer, String> OperatorlistMap;
@@ -42,6 +43,7 @@ public class PrepaidActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(view);
         loginpfe=getSharedPreferences("isLogin",MODE_PRIVATE);
         operator=getSharedPreferences("Opertaor",MODE_PRIVATE);
+        dashboard=getSharedPreferences("Dashboard",MODE_PRIVATE);
         editor=operator.edit();
         OperatorlistMap=new HashMap<>();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -49,6 +51,8 @@ public class PrepaidActivity extends AppCompatActivity implements View.OnClickLi
         this.setTitle(R.string.Prepaid);
         ColorDrawable drawable=new ColorDrawable(Color.parseColor("#300D83"));
         getSupportActionBar().setBackgroundDrawable(drawable);
+
+        binding.tvtotalBalance.setText("\u20B9"+" "+dashboard.getInt("balance",0));
         setUpNetWork();
         {
             token=loginpfe.getString("token","null");

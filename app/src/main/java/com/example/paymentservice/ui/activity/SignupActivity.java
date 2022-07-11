@@ -2,6 +2,7 @@ package com.example.paymentservice.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,7 +11,7 @@ import android.view.View;
 import com.example.paymentservice.R;
 import com.example.paymentservice.databinding.ActivitySingupBinding;
 
-public class SingupActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity implements View.OnClickListener{
 
     ActivitySingupBinding binding;
     @Override
@@ -19,12 +20,15 @@ public class SingupActivity extends AppCompatActivity {
         binding=ActivitySingupBinding.inflate(getLayoutInflater());
         View view=binding.getRoot();
         setContentView(view);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        this.setTitle(R.string.Create_Account);
-        ColorDrawable drawable=new ColorDrawable(Color.parseColor("#300D83"));
-        getSupportActionBar().setBackgroundDrawable(drawable);
-
-
+        binding.tvlogin.setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.tvlogin:
+                startActivity(new Intent(SignupActivity.this,LoginActivity.class));
+                break;
+        }
     }
 }

@@ -36,11 +36,11 @@ public class DTHReportActivity extends AppCompatActivity {
         this.setTitle(R.string.DTHrepoart);
         ColorDrawable drawable = new ColorDrawable(Color.parseColor("#300D83"));
         getSupportActionBar().setBackgroundDrawable(drawable);
-        RechargeReportAdapter adapter = new RechargeReportAdapter(data, getApplicationContext());
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        binding.recyclerviewActiveproperty.setLayoutManager(layoutManager);
-        binding.recyclerviewActiveproperty.setItemAnimator(new DefaultItemAnimator());
-        binding.recyclerviewActiveproperty.setAdapter(adapter);
+//        RechargeReportAdapter adapter = new RechargeReportAdapter(data, getApplicationContext());
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+//        binding.recyclerviewActiveproperty.setLayoutManager(layoutManager);
+//        binding.recyclerviewActiveproperty.setItemAnimator(new DefaultItemAnimator());
+//        binding.recyclerviewActiveproperty.setAdapter(adapter);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {

@@ -15,7 +15,7 @@
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/app_bar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
                 tools:ignore="MissingConstraints">
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
@@ -43,7 +43,8 @@
                             android:background="@drawable/ringing"
                             app:layout_constraintTop_toTopOf="@id/img1"
                             app:layout_constraintBottom_toBottomOf="@id/img1"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginRight="@dimen/_20sdp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.appcompat.widget.Toolbar>
             </com.google.android.material.appbar.AppBarLayout>
@@ -52,7 +53,7 @@
                 android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_40sdp"
                 app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
                 app:defaultNavHost="true"
                 app:navGraph="@navigation/graph" />
@@ -76,7 +77,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginEnd="16dp"
                         android:backgroundTint="@android:color/transparent"
-                        app:menu="@menu/bottom_nav_menu" />
+                        app:menu="@menu/bottom_nav_menu"
+                        android:layout_marginRight="16dp" />
 
                 </com.google.android.material.bottomappbar.BottomAppBar>
 
