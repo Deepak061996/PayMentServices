@@ -2,6 +2,7 @@ package com.example.paymentservice.ui.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.paymentservice.R;
 import com.example.paymentservice.databinding.PaymenthistorysinglerowBinding;
 import com.example.paymentservice.databinding.RechargereportrowBinding;
 import com.example.paymentservice.ui.model.ResultDataModel;
@@ -55,7 +57,10 @@ public class RechargeReportAdapter extends RecyclerView.Adapter<RechargeReportAd
         holder.binding.tvoperator.setText(models.operatorname.toString());
         holder.binding.dateandtome.setText(models.reqdate.toString());
         String logo=ApiClient.BASE_URL+models.operatorImage;
-        Picasso.get().load(logo).into(holder.binding.imgoperator);
+        Log.d("image","result"+logo);
+        Picasso.with(context)
+                .load(logo)
+                .into(holder.binding.imgoperator);
     }
 
     @Override
