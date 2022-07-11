@@ -13,12 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fab_Bottom_app_bar">
         <activity
-            android:name=".ui.activity.DTHRechargeActivity"
-            android:theme="@style/AppEditText"
+            android:name=".ui.activity.ForgetPasswordActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.DTHRechargeActivity"
+            android:exported="false"
+            android:theme="@style/AppEditText" />
+        <activity
             android:name=".ui.activity.SignupActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.activity.PostpaidActivity"
             android:exported="false"

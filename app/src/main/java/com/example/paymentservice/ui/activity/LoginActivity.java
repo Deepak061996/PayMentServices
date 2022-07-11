@@ -2,6 +2,7 @@ package com.example.paymentservice.ui.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -34,6 +35,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setUpNetWork();
         binding.btnNext.setOnClickListener(this);
         binding.tvsignup.setOnClickListener(this);
+        binding.etpassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        binding.tvforgetpassword.setOnClickListener(this);
     }
 
     private void setUpNetWork() {
@@ -96,6 +99,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tvsignup:
                 startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+                break;
+            case R.id.tvforgetpassword:
+                startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class));
                 break;
         }
     }

@@ -9,6 +9,7 @@ public class AppConstants {
     public static final int PrepaidRecharge_REQUEST = 4;
     public static final int WalletBalance_REQUEST = 5;
     public static final int MobileRecharge_REQUEST = 6;
+    public static final int Forgetpassword_REQUEST = 7;
 
 
 

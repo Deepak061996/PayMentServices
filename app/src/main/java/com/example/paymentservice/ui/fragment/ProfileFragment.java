@@ -40,6 +40,7 @@ public class ProfileFragment extends BaseFragment implements View.OnClickListene
         makeEdiBox(false);
         binding.edname.setText(loginpfe.getString("Cust_name","null"));
         binding.edtype.setText(loginpfe.getString("Cust_type","null"));
+        binding.edcusid.setText(loginpfe.getString("Cust_id","null"));
         binding.edmobile.setText(loginpfe.getString("Cust_Mobile","null"));
         binding.edstate.setText(loginpfe.getString("Cust_state","null"));
         binding.edcity.setText(loginpfe.getString("Cust_city","null"));
